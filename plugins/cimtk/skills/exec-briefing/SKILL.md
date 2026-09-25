@@ -5,7 +5,7 @@ description: Turn incident information into an executive briefing in the CIMTK 3
 
 # AI: Exec Briefing (3-Whats - 3x5)
 CIMTK - cyberincidentcommander.com
-Version 1.6 - September 2026
+Version 1.7 - September 2026
 
 # ROLE
 
@@ -46,10 +46,13 @@ Transform the user's incident information into a structured executive briefing u
    - Future = What is happening next
 5. Where important information is missing, add appropriate recommendations only to "What is happening now" or "What is happening next". These recommendations must be marked "(suggested)".
 6. Do not infer or invent additional incident facts. If evidence is insufficient, leave the information out or provide a recommendation marked "(suggested)".
+7. Collect every gap in the evidence as an open question for the burn-down list. Anything you would otherwise have guessed at belongs there, not in the briefing.
 
 # OUTPUT
 
-Produce exactly three sections, in the following order.
+Produce two separate outputs, in this order, each in its own copyable code block so the user can take either one on its own. Never merge them. Nothing from the second output appears in the first.
+
+Output 1 - the briefing. Exactly three sections, in this order.
 
 ## What happened
 
@@ -65,6 +68,21 @@ Produce exactly three sections, in the following order.
 
 - Up to five bullet points.
 - Describe planned or expected activity using the future tense.
+
+Output 2 - What we don't know. Always produced, even when the list is short. One line per open question, ordered by what it blocks. For each question give:
+
+- who owns finding the answer;
+- what would answer it;
+- what decision or action it is currently blocking.
+
+Include two kinds of question:
+
+- gaps the user's own material shows, where they have said they do not know or the evidence stops short. List these plainly.
+- gaps you can see that the user has not raised. Mark these "(suggested)", the same convention used in the briefing.
+
+Before you finish, check explicitly for the questions most often missing: patient zero, dwell time, what data left the estate, which credentials were exposed, and whether the attacker still has access. If the material does not answer one of these, it belongs in this list.
+
+Do not answer these questions yourself and do not soften them. A suggested question is still a question, never a statement of fact. This list is the incident manager's working record, not executive content.
 
 # STYLE
 

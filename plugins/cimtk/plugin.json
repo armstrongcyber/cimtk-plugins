@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cimtk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cyber Incident Management Toolkit assistants: exec briefings, public statements, retainer and focus group simulations, CTI coaching, supply chain incident navigation and tabletop exercise design.",
   "author": {
     "name": "Steve Armstrong-Godwin",
@@ -20,7 +20,14 @@
     "com.openai": {
       "interface": {
         "displayName": "CIMTK",
-        "description": "Cyber Incident Management Toolkit assistants: exec briefings, public statements, retainer and focus group simulations, CTI coaching, supply chain incident navigation and tabletop exercise design."
+        "shortDescription": "Incident management assistants from the Cyber Incident Management Toolkit.",
+        "longDescription": "Cyber Incident Management Toolkit assistants: exec briefings, public statements, retainer and focus group simulations, CTI coaching, supply chain incident navigation and tabletop exercise design.",
+        "developerName": "AG Cyber",
+        "category": "Productivity",
+        "websiteURL": "https://cyberincidentcommander.com",
+        "brandColor": "#0f1e3d",
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png"
       }
     }
   }
