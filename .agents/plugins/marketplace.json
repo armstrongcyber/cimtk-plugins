@@ -1,0 +1,22 @@
+{
+  "name": "cimtk",
+  "interface": {
+    "displayName": "CIMTK"
+  },
+  "plugins": [
+    {
+      "name": "cimtk",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/armstrongcyber/cimtk-plugins",
+        "path": "plugins/cimtk",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
